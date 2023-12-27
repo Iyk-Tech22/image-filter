@@ -1,5 +1,6 @@
 const path = require("path");
 const HTMLWebpackPlugin = require("html-webpack-plugin");
+const WasmWebpackPlugin = require("@wasm-tool/wasm-pack-plugin");
 
 module.exports = {
     entry: "./public/main.js",
@@ -10,6 +11,12 @@ module.exports = {
     plugins: [
         new HTMLWebpackPlugin({
             template: "./public/index.html"
+        }),
+        new WasmWebpackPlugin({
+            crateDirectory: path.resolve(__dirname, ".")
         })
-    ]
+    ],
+    experiments: {
+        asyncWebAssembly: true
+    }
 }
