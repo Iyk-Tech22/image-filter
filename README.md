@@ -9,5 +9,5 @@ to generate grayscaled image with near native speed app.
 - Rust
 
 ## Demo
-[clik here to visit demo](https://image-filter-sand.vercel.app/))
+[clik here to visit demo](https://image-filter-sand.vercel.app/)
   
